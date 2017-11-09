@@ -338,6 +338,7 @@ $('#CreateDecryptedFile').click(function(){
 	var PlainText = protocolDecipherFunc();
 	checkSign(PlainText);
 	$("#textarea").val(PlainText.ptext);
+	download($("#textarea").val(), 'outputText.txt', 'text/plain');
 });
 
 
