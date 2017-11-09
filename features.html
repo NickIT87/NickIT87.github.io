@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Features</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<!--Jquery CDN-->
+	<script src="libs/jquery-3.2.1.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link href="libs/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="libs/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<!-- My style CSS -->
+	<link rel="stylesheet" type="text/css" href="styles/features.css">
+	<link rel="stylesheet" type="text/css" href="styles/styleRobot.css">
+	<link rel="shortcut icon" href="img/favicon.gif">
+</head>
+<body>
+<br>
+<div class="container" id="mycontainer">
+	<div class="row" id="myhead">
+		<header class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<div class="masthead clearfix">
+	            <div class="inner">
+	        	    <a href="index.html"><img src="img/logo.png" alt="white paper QA" class="masthead-brand"></img></a>
+	                <ul class="nav masthead-nav">
+	                  <li class="active"><a href="features.html">Features</a></li>                  
+	                </ul>
+	            </div>
+	        </div>
+		</header>
+	</div>
+	<br>
+	<div class="row" id="content">
+
+		<div id="cryptprg" class="tabbable col-lg-6 col-md-6 col-sm-12 col-xs-12"> <!-- Only required for left/right tabs -->
+			<ul class="nav nav-pills">
+				<li class="active"><a href="#tab1" data-toggle="tab"><span class="glyphicon glyphicon-qrcode"></span></a></li>
+			    <li><a href="#tab2" data-toggle="tab"><span class="glyphicon glyphicon-cog"></span></a></li>
+			    <li><a href="#tab3" data-toggle="tab"><span class="glyphicon glyphicon-flash"></span></a></li>
+			</ul>
+		  	<div class="tab-content">
+
+			  	<div class="tab-pane active" id="tab1">
+			    	<div id="cryptFileForm">
+						<h3 class="terminus">CYBER CIPHER MODULE</h3>
+						<h6>version 1.1: electronic sign</h6>					
+						<form action="" method="" class="formFile">
+				    		<!--
+							<div class="radio">
+								<input id="input" class="fileInput" type="file">
+								<div class="cipherAction">
+									<label class="radio-inline"><input type="radio" name="1" checked="checked">cipher</label>
+									<label class="radio-inline"><input type="radio" name="1">decipher</label>	
+								</div>
+							</div>
+							-->
+							<input id="input" class="fileInput" type="file">
+							<label class="lab1 lbl" for="textarea">Text from this field will be encrypted/decrypted:</label>
+							<textarea id="textarea" class="FileTextArea" placeholder="text"></textarea>
+							<label class="lab1 lbl" for="fileSign">type sign/salt here:</label>
+							<input type="text" name="signForFile" class="CrptFileInput" id="fileSign" placeholder="sign"/>
+							<label class="lab1 lbl" for="fileKey">type key/secret passphrase here:</label>
+							<input type="text" name="keyForFile" class="CrptFileInput" id="fileKey" placeholder="key"/>						
+						<!--Пример 2-->
+							<label class="lab1 lbl" for="output">form controls:</label>
+							<div id="output">
+								<a href="" id="a"><span class="glyphicon glyphicon-floppy-save"></span>download file</a>
+								<button class="btn btn-xs btn-danger" id="CreateCipherFile")">Encrypt file</button>
+								<button class="btn btn-xs btn-success" id="CreateDecryptedFile">Decrypt file</button>
+								<button class="btn btn-xs btn-primary" id="GenerateKeyForFile">Create self key</button>
+								<button class="btn btn-xs btn-warning" id="GenerateRandomKey">Random key</button>
+								<button class="btn btn-xs btn-info" id="clearAll">Clear form</button>
+							</div>
+						</form>
+					</div>		      	
+				</div>
+
+				<div class="tab-pane" id="tab2">
+					<div id="settingsForm">
+						<h3 class="terminus">SETTINGS</h3>
+						<h6>version 1.1: electronic sign</h6>
+						<br>
+						<label class="lab1 lbl" for="pbkdfSettings">Secret key length:</label>
+						<div class="radio2" id="pbkdfSettings">
+							<label class="radio-inline"><input type="radio" name="2" checked="checked">128 bit</label>			
+							<label class="radio-inline"><input type="radio" name="2">256 bit</label>
+							<label class="radio-inline"><input type="radio" name="2">512 bit (1000 iterations)</label>
+						</div>
+						<br>
+						<label class="lab1 lbl" for="ciphersSettings">Cipher algorithms:</label>
+						<div class="radio2" id="ciphersSettings">
+							<label class="radio-inline"><input type="radio" name="3" checked="checked">AES</label>
+							<label class="radio-inline"><input type="radio" name="3">Triple DES</label>
+							<label class="radio-inline"><input type="radio" name="3">Rabbit</label>
+							<label class="radio-inline"><input type="radio" name="3">RC4drop</label>		
+						</div>
+						<br>
+						<label class="lab1 lbl" for="hmacSettings">HMAC algorithms:</label>
+						<div class="radio2" id="hmacSettings">
+							<label class="radio-inline"><input type="radio" name="4" checked="checked">MD-5</label>
+							<label class="radio-inline"><input type="radio" name="4">SHA-1</label>						
+							<label class="radio-inline"><input type="radio" name="4">SHA-256</label>
+							<label class="radio-inline"><input type="radio" name="4">SHA-512</label>
+						</div>
+						<br>
+						<label class="lab1 lbl" for="hasherSettings">Hasher algorithms:</label>
+						<div class="radio2" id="hasherSettings">
+							<label class="radio-inline"><input type="radio" name="5" checked="checked">sha3-224</label>
+							<label class="radio-inline"><input type="radio" name="5">sha3-256</label>						
+							<label class="radio-inline"><input type="radio" name="5">sha3-384</label>
+							<label class="radio-inline"><input type="radio" name="5">sha3-512</label>
+							<label class="radio-inline"><input type="radio" name="5">Ripemd-160</label>
+						</div>			
+					</div>
+				</div>
+
+			    <div class="tab-pane" id="tab3">
+			      	<!--dfsgsdfgsdfgdfsgdfsgdfsgdfsgdsfgdfsg-->
+			      	<div id="cypherprg">				
+						<h3 class="terminus">Crypt bot: <strong>"QUARK43"</strong></h3>
+						<h6><strong>version 0.3:</strong> "Gronsfeld cypher"</h6>
+						<br>
+						<!--Encryption form-->
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+							<h4 class="encform">Encryption form</h4>
+							<form action="" method="" id="form1">
+								<div class="form-group">
+									<label class="lab1" for="text1">some text</label>
+									<input type="text" name="originaltext" class="form-control" id="text1" placeholder="only laters"/>
+								</div>
+								<div class="form-group">
+									<label class="lab1" for="key1">key</label>
+									<input type="key" name="originaltext" class="form-control" id="key1" placeholder="only numbers"/>
+								</div>
+								<div class="form-group">
+									<label class="lab1" for="shifrResult1">result</label>
+									<input type="shifrResult" name="originaltext" class="form-control" id="shifrResult1" placeholder="must be clear"/>
+								</div>
+								<br>
+								<div class="form-group">
+									<button type="button" class="btn btn-danger" id="btn1">Encrypt</button>
+								</div>
+							</form>
+						</div>
+						<!--Decryption form-->
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+							<h4 class="decform">Decryption form</h4>
+							<form action="" method="" id="form2">
+								<div class="form-group">
+									<label class="lab2" for="text2">some cypher</label>
+									<input type="text" name="originaltext" class="form-control" id="text2" placeholder="only laters"/>
+								</div>
+								<div class="form-group">
+									<label class="lab2" for="key2">key</label>
+									<input type="key" name="originaltext" class="form-control" id="key2" placeholder="only numbers"/>
+								</div>
+								<div class="form-group">
+									<label class="lab2" for="shifrResult2">result</label>
+									<input type="shifrResult" name="originaltext" class="form-control" id="shifrResult2" placeholder="must be clear"/>
+								</div>
+								<br>
+								<div class="form-group">
+									<button type="button" class="btn btn-success" id="btn2">Decrypt</button>
+								</div>
+							</form>
+						</div>
+					</div>
+			      	<!--dsfadsfdfadsfadfadfadfadsfsadfdsafadsf-->
+			    </div>
+			</div>
+		</div>
+		
+	    <!--CHAT BOT-->
+		<div id="chatprg" class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<div class="chatbox col-xs-12" id="chatbox">
+				<div class="chatlogs" id="logs">
+
+					<div name="msg" class="chat self">
+						<div class="user-photo"><img src="img/shwarz.png"></div>
+						<p class="chat-message">
+							Chat-bot. Build: version 0.2. Created by <a href="download/NickolazResume.pdf" download>Nickolazz</a>, 06.08.2017.
+						</p>
+					</div>
+					
+					<div name="msg" class="chat friend">
+						<div class="user-photo1"><img src="img/terminator.png"></div>
+						<p class="chat-message">Type 'start' for a test demonstration of the solution to your problems. Answer 'yes' or 'no'.</p>
+					</div>
+					<!--
+					<div name="msg" class="chat self">
+						<div class="user-photo"><img src="img/shwarz.png"></div>
+						<p class="chat-message">TEST MESSAGE</p>
+					</div>
+					-->
+				</div>
+
+				<div class="chat-form">
+					<textarea id="txt" placeholder="for send message press: ctrl + enter"></textarea>
+					<button type="button" class="btn btn-lg btn-primary" id="btn">Send</button>
+				</div>
+				<br>
+			</div>
+		</div>
+	</div>
+	<br>
+</div>
+<script type="text/javascript" src="scripts/mainRobot.js"></script>
+<script type="text/javascript" src="scripts/gronsfeld.js"></script>
+<style id="holderjs-style" type="text/css">
+    @font-face {
+        font-family: Terminator; /* Гарнитура шрифта */
+        src: url(fonts/Terminator.ttf); /* Путь к файлу со шрифтом */
+        /*src: local(Terminator), url(fonts/Terminator.ttf); /* Путь к файлу со шрифтом */
+    }
+</style>
+
+<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>-->
+<!-- CryptoJS -->
+        <script src="libs/crypto-js-develop/src/core.js"></script>
+        <script src="libs/crypto-js-develop/src/lib-typedarrays.js"></script>
+        <script src="libs/crypto-js-develop/src/x64-core.js"></script>
+        <script src="libs/crypto-js-develop/src/enc-utf16.js"></script>
+        <script src="libs/crypto-js-develop/src/enc-base64.js"></script>
+        <script src="libs/crypto-js-develop/src/md5.js"></script>
+        <script src="libs/crypto-js-develop/src/sha1.js"></script>
+        <script src="libs/crypto-js-develop/src/sha256.js"></script>
+        <script src="libs/crypto-js-develop/src/sha224.js"></script>
+        <script src="libs/crypto-js-develop/src/sha512.js"></script>
+        <script src="libs/crypto-js-develop/src/sha384.js"></script>
+        <script src="libs/crypto-js-develop/src/sha3.js"></script>
+        <script src="libs/crypto-js-develop/src/ripemd160.js"></script>
+        <script src="libs/crypto-js-develop/src/hmac.js"></script>
+        <script src="libs/crypto-js-develop/src/pbkdf2.js"></script>
+        <script src="libs/crypto-js-develop/src/evpkdf.js"></script>
+        <script src="libs/crypto-js-develop/src/cipher-core.js"></script>
+        <script src="libs/crypto-js-develop/src/mode-cfb.js"></script>
+        <script src="libs/crypto-js-develop/src/mode-ctr.js"></script>
+        <script src="libs/crypto-js-develop/src/mode-ofb.js"></script>
+        <script src="libs/crypto-js-develop/src/mode-ecb.js"></script>
+        <script src="libs/crypto-js-develop/src/pad-ansix923.js"></script>
+        <script src="libs/crypto-js-develop/src/pad-iso10126.js"></script>
+        <script src="libs/crypto-js-develop/src/pad-zeropadding.js"></script>
+        <script src="libs/crypto-js-develop/src/pad-iso97971.js"></script>
+        <script src="libs/crypto-js-develop/src/pad-nopadding.js"></script>
+        <script src="libs/crypto-js-develop/src/rc4.js"></script>
+        <script src="libs/crypto-js-develop/src/rabbit.js"></script>
+        <script src="libs/crypto-js-develop/src/rabbit-legacy.js"></script>
+        <script src="libs/crypto-js-develop/src/aes.js"></script>
+        <script src="libs/crypto-js-develop/src/tripledes.js"></script>
+<script type="text/javascript" src="libs/require.js"></script>
+<script type="text/javascript" src="scripts/features.js"></script>
+
+</body>
+</html>
+
+

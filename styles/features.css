@@ -1,0 +1,197 @@
+h3 {
+	color: #00FFFF;
+	text-shadow: 1px 1px 2px black, 0 0 1em #20B2AA;
+  margin-left: 30px;
+}
+h6 {
+	color: #ADD8E6;
+  margin-left: 30px;
+}
+.lab1 {
+	color: darkred;
+	font-weight: lighter;
+}
+.lab2 {
+	color: darkgreen;
+	font-weight: lighter;
+}
+.encform {
+	color: red;
+}
+.decform {
+	color: #00FF00;
+}
+body {
+	background-color:  black;
+}
+
+#form1 input {
+  background: black;
+  border-color: red;
+  color: white;
+}
+#form2 input {
+  background: black;
+  border-color: lime;
+  color: white;
+}
+#form3 input {
+  background: black;
+  border-color: red;
+  color: white;
+}
+
+/*
+ * Header
+ */
+
+#myhead {
+  text-align: center;
+}
+
+.masthead-brand {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.masthead-nav > li {
+  display: inline-block;
+}
+.masthead-nav > li + li {
+  margin-left: 20px;
+}
+.masthead-nav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff; /* IE8 proofing */
+  color: rgba(255,255,255,.75);
+  border-bottom: 2px solid transparent;
+}
+.masthead-nav > li > a:hover,
+.masthead-nav > li > a:focus {
+  background-color: transparent;
+  border-bottom-color: rgba(255,255,255,.25);
+}
+.masthead-nav > .active > a,
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+@media (min-width: 768px) {
+  .masthead-brand {
+    float: left;
+    margin-left: 200px;
+  }
+  .masthead-nav {
+    float: right;
+    margin-right: 200px;
+    margin-top: 10px;
+  }
+}
+
+.terminus {
+  font-family: Terminator, 'Terminator Real NFI';
+}
+
+.lead {
+  text-align: center;
+}
+
+.lead button:hover {
+  color: red;
+}
+
+.chat-message > a:hover {
+  color: red;
+  text-decoration: none;
+}
+
+.nav-pills>li.active>a {
+    color: blue;
+    background-color: black;
+}
+
+.nav-pills>li.active>a:focus {
+    color: blue;
+    background-color: black;
+}
+
+.nav-pills>li.active>a:hover {
+    color: blue;
+    background-color: black;
+}
+
+.nav-pills>li >a {
+    color: red;
+    background-color: black;
+}
+
+.nav-pills>li >a:focus {
+    color: red;
+    background-color: black;
+}
+
+.nav-pills>li >a:hover {
+    color: lime;
+    background-color: black;
+}
+
+/* Для формы шифрования файлов */
+/*
+.radio {
+  border: 1px solid;
+  padding: 6px;
+  border-radius: 4px;
+}
+.radio>input {
+  float: left;
+}
+*/
+.fileInput {
+  border: 1px solid;
+  padding: 6px;
+  border-radius: 4px;
+}
+.radio2 {
+  color: lime;
+}
+.cipherAction {
+  text-align: right;
+  margin-right: 20px;
+}
+.FileTextArea {
+  border: 1px solid;
+  border-color: lime;
+  background-color: black;
+  color: white;
+  height: 80px;
+  width: 100%;
+  border-radius: 4px;
+}
+.CrptFileInput {
+  border: 1px solid;
+  width: 100%;
+  padding: 6px;
+  font-size: 14px;
+  background-color: black;
+  border-radius: 4px;
+  color: white;
+  border-color: lime;
+}
+.lbl {
+  padding: 5px;
+}
+.formFile {
+  color: lime;
+  /*border-radius: 4px;*/
+}
+#output > a:hover {
+  color: red;
+  text-decoration: none;
+}
+/* Для формы шифрования файлов */
+
