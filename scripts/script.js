@@ -2,7 +2,7 @@ $('#showbut').click(function(){
     $('#firstcontent').hide();
     $('.mastfoot').hide();
     $('#secondcontent').show();
-    $('#player')[0].play();
+    //$('#player')[0].play();
     return false;
 });
 

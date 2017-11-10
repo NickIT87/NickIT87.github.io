@@ -31,12 +31,12 @@
             </div>
 
             <div class="inner cover" id="firstcontent">
-              <h1 class="cover-heading">Interactive resume</h1>
+              <h1 class="cover-heading">Interactive test area</h1>
               <p class="lead">
-                This is the business card of the candidate for a job QA test engineer.</br>Here is: my resume, portfolio and basic information about this project.
+                This is the training playground of the QA test engineer.</br>Here is: code links and basic information about this project.
               </p>
               <p class="lead">
-                <button class="btn btn-lg btn-danger" id="showbut" onclick="document.getElementById('player').play()">Learn more</button>
+                <button class="btn btn-lg btn-danger" id="showbut" >Learn more</button>
               </p>
             </div>
 
@@ -61,35 +61,59 @@
                   A message based on a self - contained security protocol and mutual trust users. 
                 </p>
                 <p class="leads">
-                  Download and read <a href="download/CyberCipherGuide.pdf" download>UserGuide.pdf</a>
-                </p>
-                <p class="leads">
                   for the correct application use the google chrome, opera browser. Mozilla browser not supported.
-                </p>                
-                <p class="leads">
-                  <img data-src="holder.js/145x190" class="img-thumbnail" alt="145x190" style="width: 265px; height: 155px;" src="img/cypher.png" data-holder-rendered="true">
-                  <a href="features.html">Features - cipher:</a> The Gronfeld cipher is a polyalphabetic substitution cipher created by Count Gronsweld (head of the first decipherment service of Germany) in the 17th century. Cipher can be considered an improvement in the cipher of Caesar (reliability) and Vigenera / Beaufort (speed).
                 </p>
                 <p class="leads">
-                  The application only accepts text, special characters and punctuation marks are not processed.
-                </p>
+                  <a href="features.html">Features - bot: </a> simple chat-bot that implements the scheme of the system of questions and answers.
+                  It offers the possibility of solving the problem of faulty equipment that was damaged as a result of misuse. Similarly, under certain conditions the bot responds with a random winged expression in English and German.
+                </p>                  
                 <hr>
               </div>
               <div id="abouttext2">
-                <p class="leads">
-                  <img name="terminator" data-src="holder.js/265x155" class="img-thumbnail" alt="265x155" style="width: 265px; height: 155px;" src="img/boot.jpg" data-holder-rendered="true">
-                  <a href="features.html">Features - bot: </a> simple chat-bot that implements the scheme of the system of questions and answers.
-                  It offers the possibility of solving the problem of faulty equipment that was damaged as a result of misuse. Similarly, under certain conditions the bot responds with a random winged expression in English and German.
+                <img name="terminator" data-src="holder.js/265x155" class="img-thumbnail" alt="265x155" style="width: 265px; height: 155px;" src="img/boot.jpg" data-holder-rendered="true">
+                <p class="leads" id="abouttext3">
+                <a href="download/BDDinteractiveBot.rar" download>Demonstration Bot: </a> implemented with automation tools, for automation demonstration of this resource. To run requires installed selenium web-driver, behave framework and python3. Example was tested in Windows 7 environment.
                 </p>
                 <p class="leads">
                   There is a link to the source code of the test suite in python with behave framework on the pattern: <br> 
-                  <a href="download/My_QA_PORTFOLIO.rar" download>Page object for the online store rozetka.com.ua.</a>
+                  <a href="https://github.com/Nickolazz1/BDD-tests-for-rozetka.com.ua">Page object for the online store rozetka.com.ua.</a>
                 </p>
                 <hr>
+                <div class="DescriptionCC">
+                  <p> The use of the cipher module: </p>
+                  <ol>
+                    <li>
+                      <p>Alice and Bob using their private communication channel determine their own secret keys and sign and exchange them.</p>
+                      <p class="descCC">each user has secret information:</p>
+                      <p class="descCC">Alice's key, Bob's key, Alice's signature, Bob's signature.</p>
+                    </li>
+                    <li>
+                      <p>During the communication session, Alice:</p>
+                      <p>2.1 - generates an open session key and uses an open channel communication sends it to Bob.</p>
+                      <p>2.2 - generates a private session key using its own private key and the previously generated public session key.</p>
+                      <p>2.3 - creates a message, signs it, encrypts it with a private session key.</p>
+                      <p>2.4 - sends a message to Bob.</p>
+                      <p class="descCC">Bob has:</p>
+                      <p class="descCC">Closed information: Alice's key, Bob's key, Alice's signature, Bob's signature.</p>
+                      <p class="descCC">Public information: open session key, encrypted message.</p>
+                    </li>
+                    <li>
+                      <p>Bob's actions:</p>
+                      <p>3.1 - Generates a private session key using Alice's secret key and open session key. 
+                      (thus verifying the authorship of the open the session key that Alice created)</p>
+                      <p>3.2 - With the help of the received private session key, Bob decrypts the message</p>
+                      <p>3.3 - the program also checks the electronic signatures that Bob enters in the field when
+                      decoding of the message.</p>
+                      <p>3.4 - Responds to Alice's message using the same algorithm, using
+                      own private key and signature.</p>
+                      <p class="descCC">The system will be hacked if the attacker receives the secret key of one of the users
+                      or a private session key.</p>
+                    </li>
+                  </ol>
+                     
+                </div>
               </div>
-              <p class="leads" id="abouttext3">
-                <a href="download/BDDinteractiveBot.rar" download>Demonstration Bot</a> - bot implemented with automation tools, for automation demonstration of this resource. To run requires installed selenium web-driver, behave framework and python3. Example was tested in Windows 7 environment.
-              </p>
+              
               </br>
               <div class="lead">
                 <button class="btn btn-sm btn-info" id="playerPlay" onclick="document.getElementById('player').pause()">pause</button>
@@ -110,7 +134,7 @@
           </div>
         </div>
     </div>
-    <audio id="player" src="audio/terminator.mp3"></audio> 
+    <audio id="player" src="audio/sound.mp3" type="audio/mp3"></audio> 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
