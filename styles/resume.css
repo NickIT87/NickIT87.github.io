@@ -1,0 +1,102 @@
+
+body {
+	background-color:  black;
+}
+
+/*
+ * Header
+ */
+
+ /* Links */
+a:focus,
+a:hover {
+  color: red;
+  text-decoration-line: none;
+
+}
+
+header {
+  margin-left: 8px;
+}
+
+#myhead {
+  text-align: center;
+}
+
+.masthead-brand {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.masthead-nav > li {
+  display: inline-block;
+}
+.masthead-nav > li + li {
+  margin-left: 20px;
+}
+.masthead-nav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff; /* IE8 proofing */
+  color: rgba(255,255,255,.75);
+  border-bottom: 2px solid transparent;
+}
+.masthead-nav > li > a:hover,
+.masthead-nav > li > a:focus {
+  background-color: transparent;
+  border-bottom-color: rgba(255,255,255,.25);
+}
+.masthead-nav > .active > a,
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+@media (min-width: 768px) {
+  .masthead-brand {
+    float: left;
+    margin-left: 200px;
+  }
+  .masthead-nav {
+    float: right;
+    margin-right: 200px;
+    margin-top: 10px;
+  }
+}
+
+#resumeContent {
+  color: white;
+}
+#resumeContent > .basicInform {
+  float: right;
+  text-align: left;
+}
+.basinf {
+  float: right;
+  text-align: left;
+  color: #337ab7;
+}
+.basinfs {
+  float: right;
+  text-align: left;
+  margin-right: 10px;
+}
+.cursive {
+  color: lightgrey;
+}
+.resumeLink {
+  float: right;
+}
+#backTop > a:focus,
+a:hover {
+  color: red;
+  text-decoration-line: none;
+  cursor: pointer;
+}
+
+#content {
+  margin-left: 10px;
+}
